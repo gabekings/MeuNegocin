@@ -1,0 +1,18 @@
+{
+    "style": "osm-bright",
+    "latitude": #(lat),
+    "longitude": #(lon),
+    "zoom": 15,
+    "width": 250 ,
+    "height": 250,
+    "scale": 1,
+    "markers": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Map_marker.svg/1200px-Map_marker.svg.png",
+          "latitude": #(lat),
+          "longitude": #(lon),
+          "width": 25,
+          "height": 25
+        }
+    ]
+}
