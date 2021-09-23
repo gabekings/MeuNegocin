@@ -1,0 +1,184 @@
+{
+  "discord_alarm":{
+    "active":true,
+    "type":"discord",
+    "startup_message":false,
+    "webhook_url":"https://discord.com/api/webhooks/874308480889131058/HGoxyenE9LV6UFsX-jXySDvpi5DQ0cJugfw2u5viBr43rK3a9ILYZAS_X19uCbP_AN8O", 
+    "monsters": {
+        "username": "<mon_name>",
+        "title":"Um <mon_name> apareceu!",
+        "url":"<gmaps>",
+        "body":"Disponivel ate: <24h_time> (<time_left>).",
+        "fields": [
+          {
+              "name": "Informanções:",
+              "value": "PC: <cp>",
+              "inline": true
+          },
+          {
+              "name": "Valores individuais:",
+              "value": "IVs: <iv_0>", 
+              "inline": true
+          }
+        ],
+        "map":"http://kings-vell.xyz:9000/staticmap/pokemon?lat=<lat>&lon=<lng>"
+        },
+      "eggs":{
+          "webhook_url":"https://discord.com/api/webhooks/878720920552890449/65LLf8bWSXLUNmYkgqrP-DqZeEznutZQcd0Cax4X75H4GIaUB69V1NHVKNa10eJ0HaRf",
+          "username":"Egg",
+          "icon_url":"https://monsterimages.tk/v1.5/regular/eggs/<egg_lvl>.png",
+          "avatar_url":"https://monsterimages.tk/v1.5/regular/eggs/<egg_lvl>.png",
+          "title":"Raid is incoming!",
+          "url":"<gmaps>",
+          "map":"http://kings-vell.xyz:9000/staticmap/pokemon?lat=<lat>&lon=<lng>",
+          "body":"A level <egg_lvl> raid will hatch at <24h_hatch_time> (<hatch_time_left>)."
+      },
+      "raids":{
+          "webhook_url":"https://discord.com/api/webhooks/878685631742623805/PQBhgb3wlvFg66z3f0eiQb_rzMWbqFEbaQ8eHKxsju9stR8HfVkaXBULZWkFl48WOh-C",
+          "username":"Raid",
+          "icon_url":"https://monsterimages.tk/v1.5/regular/monsters/<mon_id_3>_000.png",
+          "avatar_url":"https://monsterimages.tk/v1.5/regular/monsters/<mon_id_3>_000.png",
+          "title":"Level <raid_lvl> Raid is available against <mon_name>!",
+          "url":"<gmaps>",
+          "map":"http://kings-vell.xyz:9000/staticmap/pokemon?lat=<lat>&lon=<lng>",
+          "body":"The raid is available until <24h_raid_end> (<raid_time_left>)."
+      }
+    },  
+  "discord_alarm2":{
+    "active":true,
+    "type":"discord",
+    "startup_message":false,
+    "webhook_url":"https://discord.com/api/webhooks/879005043293048842/cG0OmunahFwhMhF-Yt9twTD_ITqjxQqgT0B-cWpLsMyib34VRjQEc4786P0ZLUaaougp",
+    "monsters":{
+          "username":"<mon_name>",
+          "title":"Um <mon_name> apareceu!",
+          "url":"<gmaps>",
+          "body":"Disponivel ate: <24h_time> (<time_left>).",
+          "fields": [
+            {
+                "name": "Informanções:",
+                "value": "PC: <cp>",
+                "inline": true
+            },
+            {
+                "name": "Valores individuais:",
+                "value": "IVs: <iv_0>", 
+                "inline": true
+            }
+          ],
+          "map":"http://kings-vell.xyz:9000/staticmap/pokemon?lat=<lat>&lon=<lng>"
+    }
+  },
+  "discord_alarm3":{
+    "active":true,
+    "type":"discord",
+    "startup_message":false,
+    "webhook_url":"https://discord.com/api/webhooks/878814527809028117/pMcRamk9Im-vc41b_zgW3AFkVhY7SBQFYp2UeHNjorSELm1yNt9vURxL14YRlIO34vNY",
+    "monsters":{
+          "username":"<mon_name>",
+          "title":"Um <mon_name> apareceu!",
+          "url":"<gmaps>",
+          "body":"Disponivel ate: <24h_time> (<time_left>).",
+          "fields": [
+            {
+                "name": "Informanções:",
+                "value": "PC: <cp>",
+                "inline": true
+            },
+            {
+                "name": "Valores individuais:",
+                "value": "IVs: <iv_0>", 
+                "inline": true
+            }
+          ],
+          "map":"http://kings-vell.xyz:9000/staticmap/pokemon?lat=<lat>&lon=<lng>"
+    }
+  },
+    "discord_alarm4":{
+      "active":true,
+      "type":"discord",
+      "startup_message":false,
+      "webhook_url":"https://discord.com/api/webhooks/886807613461901322/krjCsUrrDjVSwlto_J_FAqM2b6BqxY-RzNsqIC3gEsfP-9B09wUzyGRPvfx4V46IZOcs",
+      "monsters":{
+            "username":"<mon_name>",
+            "title":"Um <mon_name> apareceu!",
+            "url":"<gmaps>",
+            "body":"Disponivel ate: <24h_time> (<time_left>).",
+            "fields": [
+              {
+                  "name": "Informanções:",
+                  "value": "PC: <cp>",
+                  "inline": true
+              },
+              {
+                  "name": "Valores individuais:",
+                  "value": "IVs: <iv_0>", 
+                  "inline": true
+              }
+            ],
+            "map":"http://kings-vell.xyz:9000/staticmap/pokemon?lat=<lat>&lon=<lng>"
+          }
+    },
+    "discord_alarm5":{
+      "active":true,
+      "type":"discord",
+      "startup_message":false,
+      "webhook_url":"https://discordapp.com/api/webhooks/874308480889131058/HGoxyenE9LV6UFsX-jXySDvpi5DQ0cJugfw2u5viBr43rK3a9ILYZAS_X19uCbP_AN8O",
+      "monsters":{
+            "username":"<mon_name>",
+            "title":"Um <mon_name> apareceu!",
+            "url":"<gmaps>",
+            "body":"Disponivel ate: <24h_time> (<time_left>).",
+            "fields": [
+              {
+                  "name": "Informanções:",
+                  "value": "PC: <cp>",
+                  "inline": true
+              },
+              {
+                  "name": "Valores individuais:",
+                  "value": "IVs: <iv_0>", 
+                  "inline": true
+              }
+            ],
+            "map":"http://kings-vell.xyz:9000/staticmap/pokemon?lat=<lat>&lon=<lng>"
+          }
+    },
+      
+  
+
+  "pushbullet_alarm":{
+    "active":false,
+    "type":"pushbullet",
+    "api_key":"YOUR_API_KEY"
+  },
+  "slack_alarm":{
+    "active":false,
+    "channel":"general",
+    "type":"slack",
+    "api_key":"YOUR_API_KEY"
+  },
+  "telegram_alarm":{
+    "active":true,
+    "type":"telegram",
+    "startup_message":false,
+    "bot_token":"1967030388:AAFYIroqfcSzFNWVQV_3JedVsVmk7lzqcug",
+    "chat_id":"-555681183"
+  },
+  "twilio_alarm":{
+    "active":false,
+    "type":"twilio",
+    "account_sid":"YOUR_API_KEY",
+    "auth_token":"YOUR_AUTH_TOKEN",
+    "from_number":"YOUR_FROM_NUM",
+    "to_number":"YOUR_TO_NUM"
+  },
+  "twitter_alarm":{
+    "active":false,
+    "type":"twitter",
+    "access_token":"YOUR_ACCESS_TOKEN",
+    "access_secret":"YOUR_ACCESS_SECRET",
+    "consumer_key":"YOUR_CONSUMER_KEY",
+    "consumer_secret":"YOUR_CONSUMER_SECRET"
+  }
+}

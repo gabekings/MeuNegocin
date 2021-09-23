@@ -1,254 +1,88 @@
-# DO NOT USE NOTEPAD TO EDIT CONFIG FILES! USE NOTEPAD++ INSTEAD!
-# Uncomment a line when you want to change its default value (Remove # at the beginning)
-# When your configuration is done, rename this file by removing the ".example" extension
-# A different config-files can be included directly in processes by "--config-file" or "-cf" and path
+# DO NOT USE NOTEPAD OR TEXTEDIT TO EDIT FILES!
+# USE AN EDITOR SUCH AS NOTPAD++, ATOM, NANO OR VI(M)
+# You can create a copy of this config and edit it to suit your needs.
+# Uncomment a line (remove the #) when you want to change its default value.
+# By default, PA will use `config/config.ini` to load settings.
+# You can override the config file selection with `--config-file` or `-cf`.
 
 
-# Common settings
-#################
+########################
+# Webserver Settings
+########################
 
-#location:                      # Location, can be an address or coordinates.
-#pogo-assets:                   # Directory pointing to optional PogoAssets root directory. (default=None)
-#generate-images                # Use ImageMagick to generate dynamic icons on demand.
-
-
-# Front end settings
-#################
-
-#map-title:                     # Title of the map. (default='RocketMAD')
-#custom-favicon                 # Use a custom favicon. Generate your custom favicon files here: https://realfavicongenerator.net and place them in /static/images/appicons/custom.
-                                # Set the path under Favicon Generator Options to '/static/images/appicons/custom'. (default=False)
-#no-header-image                # Hides header image. (default=False)
-#header-image:                  # Image in header. Place image in 'static/images/header'. (default='rocket.png')
-#madmin-url:                    # MADmin URL e.g. http://127.0.0.1:5001/map (default=None)
-#donate-url:                    # Donation link, e.g. PayPal. (default=None)
-#patreon-url:                   # Patreon page link. (default=None)
-#discord-url:                   # Discord server invite link. (default=None)
-#messenger-url:                 # Messenger group invite link. (default=None)
-#telegram-url:                  # Telegram group invite link. (default=None)
-#whatsapp-url:                  # WhatsApp group invite link. (default=None)
-
-#max-zoom-level:                # Maximum level a user can zoom out. Range: [0,18]. 0 means the user can zoom out completely. (default=10)
-#cluster-zoom-level:            # Zoom level from which markers should be clustered. Range: [0,18]. -1 to disable clustering. (default=14)
-#cluster-zoom-level-mobile:     # Zoom level from which markers should be clustered on mobile. Range: [0,18]. -1 to disable clustering on mobile. (default=14)
-#max-cluster-radius:            # The maximum radius that a cluster will cover from the central marker (in pixels). (default=60)
-#spiderfy-clusters              # Spiderfy clusters at the bottom zoom level. (default=False)
-#markers-outside-viewport       # Do not remove markers outside visible bounds. (default=False)
-#no-autopan-popup               # Enable if you don't want the map to do a panning animation to fit opened popups on mobile devices. (default=False)
-#lock-start-marker              # Disables dragging the start marker and hence disables changing the start position. (default=False)
-#no-geocoder                    # Do not add the geocoder (location search bar) to the map. (default=False)
-
-#no-pokemon                     # Disables pokemon. (default=False)
-#no-pokemon-values              # Disables pokemon values. (ivs, cp, moves, etc.) (default=False)
-#catch-rates                    # Show catch rates for all three balls. (default=False)
-#upscaled-pokemon:              # Pokémon IDs to upscale icons for. Seperate IDs with commas. (default=None)
-#no-pokemon-history-page        # Disables pokemon history page. (default=False)
-#verified-despawn-time          # Show if pokemon despawn time is verified.
-#show-all-zoom-level            # Show all Pokemon, even excluded, at this map zoom level.
-                                # Set to 0 to disable this feature. Set to 19 or higher for nice results.
-#pokemon-cries                  # Play cries for pokemon notifications. Place your sound files (wav or mp3) in static/sounds/cries. (default=False)
-
-#no-gyms                        # Disables gyms. (default=False)
-#no-gym-sidebar                 # Disable the gym sidebar and toggle. (default=False)
-#no-gym-filters                 # Disable gym filters in side nav. (default=False)
-#no-raids                       # Disables raids. (default=False)
-#no-raid-filters                # Disable raid filters in side nav. (default=False)
-#black-white-badges             # Use black/white background with white/black text for gym/raid level badge in gym icons.
-
-#no-pokestops                   # Disables pokestops. (default=False)
-#no-quests                      # Disables quests. (default=False)
-#quest-reset-time:              # Only show quests scanned after this time. (default=00:00)
-#no-quest-page                  # Disables quest page. (default=False)
-#no-invasions                   # Disables team rocket invasions. (default=False)
-#no-lures                       # Disables lures. (default=False)
-
-#no-weather                     # Disables weather. (default=False)
-#no-spawnpoints                 # Disables spawn points. (default=False)
-#no-scanned-locs                # Disables scanned locations. (default=False)
-#no-s2-cells                    # Disables s2 cells. (default=False)
-#no-ranges                      # Disables user to show interaction ranges. (default=False)
-
-#no-stats-sidebar               # Hides stats sidebar. (default=False)
-#twelve-hour-clock              # Display time with the 12-hour clock format.
-#analytics-id:                  # Google Analytics Tracking-ID. (default=None)
-#map-update-interval:           # Interval between raw-data requests (map updates) in milliseconds. (default=2500)
-
-#motd                           # Shows a MOTD (Message of the Day) on visit. (default=False)
-#motd-title:                    # MOTD title, can be HTML. (default='MOTD')
-#motd-text:                     # MOTD text, can be HTML. (default='Hi there! This is an easily customizable MOTD.')
-#motd-pages:                    # Pages the MOTD should be shown on. (default=['/', '/mobile'])
-#show-motd-always               # Show MOTD on every visit. If disabled, the MOTD will only be shown when its title or text has changed. (default=False)
+#host: 127.0.0.1                # Interface to listen on (default='127.0.0.1')
+#port: 4000						# Port to listen on (default='4000')
+#concurrency: 200               # Maximum concurrent connections to webserver (default=200)
+#manager_count: 1				# Number of Managers to run (default=1)
+#debug                          # Enable debug logging (default='False)
+#quiet                          # Disable output to stdin/stdout.
+#log-lvl: 3                     # Verbosity of the main logger (default=3)
+#log-file: logs/pokealarm.log   # File path of the main logger (default='logs/pokealam.log'). None to disable logging to file.
+#log-size: 100                  # Maximum size in mb of a log before rollover.
+#log-ct: 5                      # Maximum number of logs to keep.
 
 
-# Tile server settings
-######################
-# You can setup your own tile server with this tool: https://github.com/123FLO321/SwiftTileserverCache
+#########################
+# Manager Settings
+#########################
+# All of the settings below this line are manager-specific.
+# If a single setting is supplied, it will apply to all Managers.
+# Example: `locale: en` will set all Managers to english
+# If an array of settings is supplied, they will be apply to Managers in order.
+# Example: `locale: [ en, fr, en ]` sets a different language for 3 Managers.
+# `None` can be used to exempt a Manager from an optional setting
 
-#custom-tile-servers:           # Use your own tile server(s). Accepts list of names and urls separated by ':'. Names should be unique.
-                                # Example: [tile_server_name1:tile_server_url1, tile_server_name2:tile_server_url2] (default=[])
+#manager_name:                  # Name of Manager, used for logging (default='manager#')
 
-
-# Geofence settings
-###################
-# Place your geofence files in the geofences folder.
-
-#geofence-file:                 # Geofence file to define outer borders of the area for which data is to be retrieved.
-#geofence-exclude-file:         # File to exclude areas. Regard this as an inverted geofence. Can be combined with geofence-file.
-
-
-# Nests
-#######
-# Nests will be stored in the RM database. You can generate them with this script: https://github.com/M4d40/PMSFnestScript
-
-#nests                          # Show nests on the map. (default=False)
+# Logging Settings
+#####################
+#mgr-log-lvl: 3                 # Verbosity of a manager's logger (default=3)
+#mgr-log-file: logs/mgr.log     # Path of a file to attach to a manager's logger.
+#mgr-log-size: 100              # Maximum size (in mb) of a log before rollover.
+#mgr-log-ct: 5                  # Maximum number of older logs to keep.
 
 
-# Parks
-#######
-# Download ex raid eligible and nest parks from the Overpass API. Parks are saved to `static/dist/data/parks/{file_name}.json`.
-# Remove the JSON file(s) to redownload the parks. Park downloading is done by running runhelper.py
+# File Settings
+#####################
+# File settings define location of files with settings for a Manager.
+# Relative paths are presumed from install folder, root paths are absolute.
 
-#ex-parks                       # Display ex raid eligible parks. (default=False)
-#nest-parks                     # Display nest parks. (default=False)
-#ex-parks-downloading           # Enables ex raid eligible parks downloading. (default=False)
-#nest-parks-downloading         # Enables nest parks downloading. (default=False)
-#ex-parks-geofence-file:        # Geofence file to define outer borders of the ex park area to download. Place file in the geofences folder.
-#nest-parks-geofence-file:      # Geofence file to define outer borders of the nest park area to download. Place file in the geofences folder.
-#ex-parks-filename:             # Name of the JSON file (without .json) for ex parks. Useful when running two or more instances out of the same folder. (default='parks-ex')
-#nest-parks-filename:           # Name of the JSON file (without .json) for nest parks. Useful when running two or more instances out of the same folder. (default='parks-nest')
-#parks-query-timeout:           # The maximum allowed runtime for the parks query in seconds. (default=86400)
+#filters: filters.json          # Filters for the Manager (default='filters.json')
+#alarms: alarms.json            # Alarms for the Manager (default='alarms.json')
+#rules: rules.json              # Rules for the Manager (default=None)
+#geofence: geofence.txt         # Geofences to be used in Filters (default=None)
 
 
-# Database settings
-###################
-
-#db-host:                       # Required for mysql ()
-#db-name:                       # Required for mysql
-#db-user:                       # Required for mysql
-#db-pass:                       # Required for mysql
-#db-port:                       # Required for mysql (default=3306)
-#db-pool-recycle:               # Number of seconds after which a connection is automatically recycled. (default=7200)
-
-
-#Database cleanup
-#################
-# Database cleanup is done by running runhelper.py
-
-#db-cleanup-interval:           # Time between database cleanups in seconds. Default: 600
-#db-cleanup-pokemon:            # Clear pokemon from database X hours after they disappeared. Default: 0, 0 to disable.
-#db-cleanup-gym:                # Clear gym details (including raids) from database X hours after last gym scan. Default: 0, 0 to disable.
-#db-cleanup-pokestop            # Clear lure data, invasion data, and quests when no longer active. Default: False
-#db-cleanup-forts:              # Clear gyms and pokestops from database X hours after last valid scan. Default: 0, 0 to disable.
-#db-cleanup-spawnpoint:         # Clear spawnpoint from database X hours after last valid scan. Default: 0, 0 to disable.
+# Location Specific
+#####################
+#location:                       # Location, as address or coordinates (default=None)
+#locale: en                     # Language used for DTS translations (default='en')
+                                # Options: ['de', 'en', 'es', 'fr', 'it', 'ko', 'pt', 'zh_hk' ]
+#unit: imperial                 # Units used to measurements.(default='imperial')
+                                # Options: ['imperial', 'metric' ]
+#timezone: America/Los_Angeles  # Timezones used for notifications. Default uses system time (default=None)
+                                # Options: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Webserver settings
-####################
-
-#host:                          # Address to listen on (default='127.0.0.1')
-#port:                          # Port to listen on (default=5000)
-#workers:                       # The number of worker processes for handling requests. Generally in the 2-4 x {NUM_CORES} range. (Default=2 x {NUM_CORES} + 1)
-#development-server             # Use Flask’s built-in development server. Don't use this in production. (default=False)
-#locale:                        # Pokemon translation language (check static/locales for list)
-#cors                           # Enable CORS on web server.
-#ssl-certificate:               # Path to ssl certificate
-#ssl-privatekey:                # Path to ssl private key
-#encrypt-lib:                   # Path to encrypt lib to be used instead of the shipped ones.
-#trusted-proxies:               # Enables the use of X-FORWARDED-FOR headers to identify the IP of clients connecting through these trusted proxies. (default=[])
-
-
-# Status and logs
-#################
-
-#status-name:                   # Enables writing status updates to the database - if you use multiple processes, each needs a unique value. (default=None)
-#access-logs                    # Write web logs to console and log file. (default=False)
-#no-file-logs                   # Disables logging to files except for access.log. (default=False)
-#log-path:                      # Defines the path logs are saved at. (default=logs/)
-#log-filename:                  # Defines the log filename to be saved. The default generates yyyymmdd_HHMM_statusname.log. (default=%Y%m%d_%H%M_<SN>)
-#verbosity                      # Show debug messages from RocketMap and PGoApi. Values are 1,2,3 (default=0)
-
-
-# Dynamic rarity
+# GMaps Settings
 ################
-# Updating dynamic rarity is done by running runhelper.py
-
-#rarity                         # Display Pokémon rarity. (default=False)
-#rarity-hours:                  # Number of hours of Pokémon data to use to calculate dynamic rarity, decimals allowed. 0 to use all data. (default=48.0)
-#rarity-update-frequency:       # How often (in minutes) the dynamic rarity should be updated. decimals allowed. 0 to disable. (default=0)
-#rarity-filename:               # Name of the JSON file (without .json) for dynamic rarity. Useful when running two or more instances out of the same folder. (default='rarity')
-
-
-# User authentication
-####################
-# You need to have redis installed for user authentication, do not setup any password on redis.
-# [sudo] apt install redis-server
-# Settings without default value (server-uri, secret-key) must be set.
-
-#server-uri:                    # Real URI of your website/server (e.g. https://myrocketmad.com). Authentication apps will use this to redirect the user to.
-#secret-key:                    # Key used to sign sessions. Must be at least 16 characters long, just generate/type some gibberish.
-#redis-host:                    # Address of Redis server (Redis is used to store session data). (default='127.0.0.1')
-#redis-port:                    # Port of Redis server. (default=6379)
-#login-required                 # If enabled, user must be logged in with any auth system before one can access the map. (default=False)
-#no-multiple-logins             # Do not allow more than one login per account. (default=False)
+#gmaps-key:                     # Google Maps API Key (default=None)
+#gmaps-rev-geocode: yes         # Enable Reverse Geocoded DTS. (default='no')
+                                # Note: This requires the Reverse Geocoding API to be enabled on your GMAPs key.
+#gmaps-dm-walk: yes             # Enable Walking DM DTS. (default='no')
+                                # Note: This requires the Distance Matrix API to be enabled on your GMAPs key.
+#gmaps-dm-bike: yes             # Enable Bicycling DM DTS. (default='no')
+                                # Note: This requires the Distance Matrix API to be enabled on your GMAPs key.
+#gmaps-dm-drive: yes            # Enable Driving DM DTS. (default='no')
+                                # Note: This requires the Distance Matrix API to be enabled on your GMAPs key.
+#gmaps-dm-transit: yes          # Enable Transit DM DTS. (default='no')
+                                # Note: This requires the Distance Matrix API to be enabled on your GMAPs key.
 
 
-# Basic authentication
-####################
-# For Basic authentication submodule to work you need to enable main User authentication module few lines above
-
-#basic-auth                     # Authenticate users with a username and password. (default=False)
-#basic-auth-credentials:        # List of username and password combinations. Example: [un1:pw1, un2:pw2] (default=[])
-#basic-auth-case-sensitive      # Use case sensitive usernames. (default=False)
-#basic-auth-access-configs:     # Use different config file based on username. Example: [un1:access_config_name1, un2:access_config_name2] (default=[])
-#basic-auth-admins:             # Users that have admin rights. Accepts list of usernames. (default=[])
-
-
-# Discord authentication
-####################
-# For Discord authentication submodule to work you need to enable main User authentication module above
-# If you want users to auth to Discord prior to accessing server, enable discord-auth, create an app here:
-# https://discordapp.com/developers/applications/me and add a redirect uri to your the application in this format: https://mysrv.com/auth/discord
-# To require a user to be in one of your guilds (servers) to gain access, specify the required guild ids and an invite url to send them to if
-# they are not in any of the required guilds.
-# To require a user be in specific roles in the guild to gain access, add a bot to the application at the above developer application page,
-# then add that bot to your guild (server) using this link: https://discordapp.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot
-
-#discord-auth                     # Authenticate users with Discord OAuth2. (default=False)
-#discord-client-id:               # OAuth2 client ID.
-#discord-client-secret:           # OAuth2 client secret.
-#discord-bot-token:               # Token for bot with access to your guild. Only required for required/blacklisted roles feature.
-#discord-blacklisted-users:       # List of user ID's that are always blocked from accessing the map. (default=[])
-#discord-whitelisted-users:       # List of user ID's that are always allowed to access the map. (default=[])
-#discord-required-guilds:         # If guild ID(s) are specified, user must be in at least one discord guild (server) to access map. Comma separated list if multiple. (default=[])
-#discord-blacklisted-guilds:      # If guild ID(s) are specified, user must NOT be in any of these guilds (servers) to access map. Comma separated list if multiple. (default=[])
-#discord-required-roles:          # If specified, user must have one of these discord roles (from a specific guild) to access map.
-                                  # Accepts list of role IDs, or list of guild IDs and roles IDs separated by ':'. Example: [<guild1>:<role1>, <guild2>:<role2>]. (default=[])
-#discord-blacklisted-roles:       # If specified, user must NOT have any of these discord roles (from a specific guild) to access map. (default=[])
-#discord-no-permission-redirect:  # Link to redirect user to if user has no permission. Typically this would be your discord guild invite link.
-#discord-access-configs:          # Use different config file based on discord role (or guild). Accepts list with elements in this format: <guild_id>:<role_id>:<access_config_name>
-                                  # You can also only use guilds. If multiple config files correspond to one user, only the first file is used. (default=[])
-#discord-admins:                  # Discord users that have admin rights. Accepts list of Discord user IDs. (default=[])
-
-
-# Telegram authentication
-####################
-# For Telegram auth submodule to work you need to enable main User authentication module above
-# If you want to authenticate users with Telegram, first create a bot with @Botfather.
-# Next find your bot token with @Botfather (/mybots -> API Token). With @Botfather set the Domain to your map URL (/mybots -> Bot Settings -> Domain).
-# You can retrieve chat and member IDs like this: https://api.telegram.org/bot<your_bot_token>/getUpdates
-
-#telegram-auth                    # Authenticate users with telegram. (default=False)
-#telegram-bot-token:              # Telegram bot token.
-#telegram-bot-username:           # Telegram bot username (without @).
-#telegram-blacklisted-users:      # List of user ID's that are always blocked from accessing the map. (default=[])
-#telegram-required-chats:         # If chat ID(s) are specified, user must be in at least one telegram group chat to access map. Comma separated list if multiple. (default=[])
-#telegram-no-permission-redirect:  # Link to redirect user to if user has no permission. Typically this would be your telegram group chat invite link.
-#telegram-access-configs:         # Use different config file based on telegram chat. Accepts list with elements in this format: <chat_id>:<access_config_name>
-                                  # If multiple config files correspond to one user, only the first file is used. (default=[])
-#telegram-admins:                 # Telegram users that have admin rights. Accepts list of Telegram user IDs. (default=[])
-
-
-# Misc
-######
-
-#dump                           # Dump censored debug info about the environment and auto-upload to hastebin.com.
+# Miscellaneous
+################
+#cache_type: file               # Type of cache used to share information between webhooks. (default='mem')
+                                # Options: ['mem', 'file']
+#timelimit: 0					# Minimum seconds remaining on an Event to trigger notification (default=0)
+# Note - `max_attempts` is being deprecated and may be replaced by alarm-level settings
+#max_attempts: 3				# Maximum number of attempts an alarm makes to send a notification. (default=3)

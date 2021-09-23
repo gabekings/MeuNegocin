@@ -1,0 +1,54 @@
+{
+    "monsters":{
+        "first rule":{
+            "filters":["filter_by_all"],
+            "alarms":["discord_alarm"]
+        },
+        "second_rule":{
+            "filters":["filter_by_100"],
+            "alarms":["discord_alarm2","telegram_alarm"]
+        },
+        "third_rule":{
+            "filters":["filter_by_89"],
+            "alarms":["discord_alarm3"]
+        },
+        "fourth_rule":{
+            "filters":["filter_by_ditto"],
+            "alarms":["discord_alarm4"]
+        },
+        "fifth rule":{
+            "filters":["filter_by_100_21"],
+            "alarms":["discord_alarm5"]
+        }
+    },
+    "stops":{
+        "all":{
+            "filters":["filter_by_geofence_example"],
+            "alarms":["discord_alarm"]
+        }
+    },
+    "gyms":{
+        "all":{
+            "filters":["filter_by_teams_example","gym_name_contains_regex_example"],
+            "alarms":["discord_alarm"]
+        }
+    },
+    "eggs":{
+        "all":{
+            "filters":["filter_by_lvl_example"],
+            "alarms":["discord_alarm"]
+        }
+    },
+    "raids":{
+        "all":{
+            "filters":["filter_by_monster","filter_raid_lvl_and_teams"],
+            "alarms":["discord_alarm"]
+        }
+    },
+    "weather":{
+        "all":{
+            "filters":["filter_by_geofence"],
+            "alarms":["discord_alarm"]
+        }
+    }
+}
